@@ -1,21 +1,20 @@
 package com.telran.demoqa.tests;
 
 import com.telran.demoqa.pages.LoginPage;
-import com.telran.demoqa.pages.ProfilePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTests extends BaseTests{
+public class LoginTests extends BaseTests {
 
     @Test
-    public void loginTestPositive(){
+    public void loginTestPositive() {
         String currentUserName = "user1568";
         String currentPwd = "enEwC9!_";
 
         Assert.assertEquals(
                 new LoginPage(driver)
-                .login(currentUserName, currentPwd)
-                .getUserName(),
+                        .login(currentUserName, currentPwd)
+                        .getUserName(),
                 currentUserName, "User name expected is: " + currentUserName);
     }
 }

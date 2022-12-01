@@ -4,15 +4,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
-    @FindBy(id="userName")
+    @FindBy(id = "userName")
     WebElement userNameField;
 
-    @FindBy(id="password")
+    @FindBy(id = "password")
     WebElement pwdField;
 
-    @FindBy(id="login")
+    @FindBy(id = "login")
     WebElement loginBtn;
 
     public LoginPage(WebDriver driver) {
@@ -21,7 +21,7 @@ public class LoginPage extends BasePage{
 
     public ProfilePage login(String userName, String pwd) {
         type(userNameField, userName);
-        type(pwdField,pwd);
+        type(pwdField, pwd);
         loginBtn.click();
         return new ProfilePage(driver);
     }
