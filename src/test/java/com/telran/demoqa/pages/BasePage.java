@@ -59,11 +59,25 @@ public abstract class BasePage {
 //        System.out.println("My s1 " + s1 + " " + s2); // > My s1 aaa s2 bbb
 
         waitForElementToBeClickable(webElement);
+       }
+
+    protected void scrollToElementAndClick(WebElement webElement, int px) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,"+ px + ")");
+        waitForElementToBeClickable(webElement);
+        webElement.click();
+
     }
 
     protected WebElement waitForElementToBeClickable(WebElement webElement) {
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.elementToBeClickable(webElement));
+        return webElement;
+    }
+
+    protected WebElement waitForElementToBeVisible(WebElement webElement) {
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOf(webElement));
         return webElement;
     }
 

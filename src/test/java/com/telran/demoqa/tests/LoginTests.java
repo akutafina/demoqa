@@ -9,12 +9,13 @@ public class LoginTests extends BaseTests {
     @Test
     public void loginTestPositive() {
         String currentUserName = "user1568";
+
         String currentPwd = "enEwC9!_";
 
         Assert.assertEquals(
                 new LoginPage(driver)
                         .login(currentUserName, currentPwd)
                         .getUserName(),
-                currentUserName, "UserName expected is: " + currentUserName);
+                currentUserName, "User Name expected is: " + currentUserName);
     }
 }
