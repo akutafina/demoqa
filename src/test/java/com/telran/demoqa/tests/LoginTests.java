@@ -14,7 +14,8 @@ public class LoginTests extends BaseTests {
 
         Assert.assertEquals(
                 new LoginPage(driver)
-                        .login(currentUserName, currentPwd).getUserName(),
+                        .login(currentUserName, currentPwd)
+                        .getUserName(),
                 currentUserName, "User  name expected is: " + currentUserName);
     }
 }
