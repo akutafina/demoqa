@@ -16,6 +16,6 @@ public class LoginTests extends BaseTests {
                 new LoginPage(driver)
                         .login(currentUserName, currentPwd)
                         .getUserName(),
-                currentUserName, "User  name expected is: " + currentUserName);
+                currentUserName, "User Name expected is: " + currentUserName);
     }
 }
