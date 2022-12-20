@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="LoginTests" verbose="1" >
+<!--    <test name="NegativeTests" >-->
+<!--        <classes>-->
+<!--            <class name="com.telran.demoqa.tests.ACLoginTests" >-->
+<!--            <methods>-->
+<!--                <include name=".*Negative.*"/>-->
+<!--                <exclude name=".*Positive.*"/>-->
+<!--            </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="ParamsTests" >
+        <classes>
+            <class name="com.telran.demoqa.tests.ACLoginTests" >
+                <parameter name="login"  value="test_login_1"/>
+                <parameter name="password"  value="test_pwd_1"/>
+                <methods>
+                    <include name=".*Params.*"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
